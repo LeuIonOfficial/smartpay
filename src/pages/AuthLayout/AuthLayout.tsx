@@ -1,10 +1,11 @@
 import { Navigate, Outlet } from "react-router-dom";
 import LoggedIn from "./LoggedIn.tsx";
+import { useSelector } from "react-redux";
 
 const AuthLayout = () => {
-  const isLoggedIn = true;
+  const { user } = useSelector((store: any) => store.auth);
 
-  if (isLoggedIn) {
+  if (true) {
     return (
       <>
         <LoggedIn>
